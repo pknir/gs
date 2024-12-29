@@ -1,0 +1,62 @@
+#overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #000;
+filter:alpha(opacity=70);
+-moz-opacity:0.7;
+-khtml-opacity: 0.7;
+opacity: 0.7;
+z-index: 100;
+display: none;
+}
+.popupcantainer {width: 440px; margin: 0 auto; display: inline-flex; text-align: center;}
+.popupcantainer a{
+text-decoration: none;
+}
+.popup-onload {
+width: 100%;
+margin: 0 auto;
+display: inline-flex;
+position: fixed;
+z-index: 101;
+top: 35%;
+}
+.popupbox {
+width: 180px;    
+margin: 15px;
+background: #fff;
+position: relative;
+z-index: 103;
+padding: 35px 0 0 0;
+border-radius: 20px;
+border: 1px solid #fff;
+box-shadow: 0 2px 5px #000;
+}
+
+.popupbox img {margin-bottom: 10px;}
+.popupbox .contry-bg {background-color: #005baa; border:1px solid #005baa; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;}
+.popupbox p {
+    clear: both;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+.popupbox p span {font-size: 16px;}
+
+@media screen and (min-device-width: 100px) and (max-device-width: 768px) { 
+    .popup-onload {top: 22%; width: 90%;}
+    .popupcantainer {width: 50%; display:block;}
+    .popupbox {width: 100%; border-radius: 50px; margin: 50px;}
+    .popupbox img {margin-bottom: 40px; width: 166px; padding-top: 45px;}
+    .popupbox p {font-size: 28px; padding: 20px;}
+    .popupbox p span {font-size: 38px;}
+    .popupbox .contry-bg {border-bottom-left-radius: 50px; border-bottom-right-radius: 50px;}
+    .iimg {width: 50% !important;}
+}

@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GS Enterprises</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      /* Basic popup and overlay styling */
+      #overlaypop {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.7);
+          z-index: 9998;
+      }
+      .popup-onload {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          z-index: 9999;
+          text-align: center;
+      }
+      .close {
+          cursor: pointer;
+      }
+      .popupcantainer {width: 440px; margin: 0 auto; display: inline-flex; text-align: center;}
+.popupcantainer a{
+text-decoration: none;
+}
+
+.popupbox {
+width: 180px;    
+margin: 15px;
+background: #fff;
+position: relative;
+z-index: 103;
+padding: 35px 0 0 0;
+border-radius: 20px;
+border: 1px solid #fff;
+box-shadow: 0 2px 5px #000;
+}
+
+.popupbox img {margin-bottom: 10px;}
+.popupbox .contry-bg {background-color: #005baa; border:1px solid #005baa; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;}
+.popupbox p {
+    clear: both;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+.popupbox p span {font-size: 16px;}
+
+@media screen and (min-device-width: 100px) and (max-device-width: 768px) { 
+    .popup-onload {top: 22%; width: 90%;}
+    .popupcantainer {width: 50%; display:block;}
+    .popupbox {width: 100%; border-radius: 50px; margin: 50px;}
+    .popupbox img {margin-bottom: 40px; width: 166px; padding-top: 45px;}
+    .popupbox p {font-size: 28px; padding: 20px;}
+    .popupbox p span {font-size: 38px;}
+    .popupbox .contry-bg {border-bottom-left-radius: 50px; border-bottom-right-radius: 50px;}
+    .iimg {width: 50% !important;}
+}
+  </style>
+  </head>
+<body>
+
+  <div class="container-fluid g-0">
+    <header>
+    <div class="container">
+      <div class="row py-3 g-0">
+        <div class="col-sm-6 mobile-50">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Logo">
+          </a>
+        </div>
+        <div class="col-sm-6 mobile-50">
+          <div class="text-end social-icons">
+            <ul>
+              <li><a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+              <li><a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a></li>           
+            </ul>
+          </div>
+        </div>    
+      </div>
+    </div>
+   
+    
+    <div class="row d-flex g-0">
+      <div class="d-flex justify-content-lg-center justify-content-sm-start navbar-bg">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">          
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="about-us.html" class="nav-link">About Us</a>
+                </li>    
+                <li class="nav-item">
+                  <a href="services.html" class="nav-link">Services</a>
+                </li>          
+                <li class="nav-item">
+                  <a href="clients.html" class="nav-link">Clients</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact-us.html" class="nav-link">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    
+   </header>
+    <section>
+      <div id="carouselExampleCaptions" class="carousel slide main-banner" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/banner1.jpg" class="d-block w-100" alt="Banner">
+            <div class="carousel-caption">
+              <p>Best Manpower Consultancy in Noida</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/banner2.jpg" class="d-block w-100" alt="Banner">
+            <div class="carousel-caption">
+              <p>Best Manpower Consultancy in Noida</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/banner3.jpg" class="d-block w-100" alt="Banner">
+            <div class="carousel-caption">
+              <p>Best Manpower Consultancy in Noida</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <div class="row banner-up">
+          <div class="col-sm-6 mobile-50 text-end"><i class="fa-solid fa-phone"></i> <a href="tel:+91-8219951384">+91-8219951384</a></div>
+          <div class="col-sm-6 mobile-50"><i class="fa-regular fa-envelope"></i> <a href="mailto:info@gsenterprises.me">info@gsenterprises.me</a></div>
+        </div>
+      </div>      
+    </section>
+    <section>
+      <div class="container">
+      <div class="row welcome">
+        <div class="col-sm-8 welcome-text">
+          <img src="images/welcome.jpg" alt="Welcome">
+          <p>Finding well-qualified team members for your business is essential to make your business grow. GS Enterprises is the best menpower services firm that helps businesses in finding the best team. We become an extension for your organization, providing expert guidance, proven strategies, and recommendations. Our consulting sessions has several layers and processes to suit the various need of your organization.</p>
+           <div class="listhome">
+            <ul>
+              <li><img src="images/bulb.jpg" alt="Inspired By Innovation"> Inspired By Innovation</li>
+              <li><img src="images/powor.jpg" alt="Powered By Passion"> Powered By Passion</li>
+              <li><img src="images/camra.jpg" alt="Experiment By Exploring"> Experiment By Exploring</li>
+              <li><img src="images/hand-shake.jpg" alt="Delight By Deliverables"> Delight By Deliverables</li>
+            </ul>
+          </div>
+          
+        </div>
+        <div class="col-sm-4">
+          <img src="images/gril.png" alt="Gril">
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="partner">
+      <div class="container g-0">
+        <h2>Why Partner with us?</h2>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="box">
+              <div class="box-img"><img src="images/heart.jpg" alt="We Love Startups"></div>              
+              <h4>We Love Startups</h4>
+              <p>Most of the time employment services agency aims
+                for a well established business to make more 
+                money but here at Yunic HR Solutions, we view 
+                every business as an equal opportunity to 
+                help business grow.</p>
+            </div>            
+          </div>
+          <div class="col-lg-4">
+            <div class="box">
+              <div class="box-img"><img src="images/process.jpg" alt="We are Process Oriented"></div>              
+              <h4>We Love Startups</h4>
+              <p>Processes are very important as they helps you in 
+                designing your way to success. Our innovative 
+                processes are customized based on the 
+                requirements of the businesses and they industry 
+                they serve in.</p>
+            </div>           
+          </div>
+          <div class="col-lg-4">
+            <div class="box">
+              <div class="box-img"><img src="images/menpower.jpg" alt="Best Manpower Services"></div>              
+              <h4>Best Manpower Services</h4>
+              <p>We are one of the best employment services in the 
+                market this is not what we say, it's our clients who 
+                refers us as the best employment agencies in India.</p>
+            </div>             
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="industries">
+      <div class="container g-0">
+        <h2>Best Recruitment Services Across Different Industries</h2>
+        <p>We aren’t just one of the best Menpower Agency in Noida. GS Enterprises is also the best consultancy in Noida for experienced people.</p>
+        <div class="row border-bottom">
+          <div class="col-lg-3 box border-right">                                        
+              <span>01.</span>
+              <div class="box-img"><img src="images/medicine.png" alt="Energy and Infrastructure"></div>
+              <hr>              
+              <h4>Pharma, Energy and Infrastructure and Life Science</h4>                      
+          </div>
+          <div class="col-lg-3 box border-right">
+              <span>02.</span>
+              <div class="box-img"><img src="images/piggy-bank.png" alt="Banking, Financial Services and Insurance"></div>
+              <hr>              
+              <h4>Banking, Financial Services and Insurance</h4>          
+          </div>
+          <div class="col-lg-3 box border-right">
+              <span>03.</span>
+              <div class="box-img"><img src="images/outsourcing.png" alt="It and Outsourcing"></div> 
+              <hr>             
+              <h4>It and Outsourcing</h4>            
+          </div>
+          <div class="col-lg-3 box">
+              <span>04.</span>
+              <div class="box-img"><img src="images/shopping-bag.png" alt="Consumer Retail and Services"></div>  
+              <hr>            
+              <h4>Consumer Retail and Services</h4>                           
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 box border-right">                                        
+              <span>05.</span>
+              <div class="box-img"><img src="images/plug.png" alt="Energy"></div>
+              <hr>
+              <h4>Energy</h4>                      
+          </div>
+          <div class="col-lg-4 box border-right">
+              <span>06.</span>
+              <div class="box-img"><img src="images/infrastructure.png" alt="Infrastructure"></div> 
+              <hr>             
+              <h4>Infrastructure</h4>                        
+          </div>
+          <div class="col-lg-4 box">            
+              <span>07.</span>
+              <div class="box-img"><img src="images/process.png" alt="BPO and KPO"></div>    
+              <hr>          
+              <h4>BPO and KPO</h4>                        
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="container g-0">
+        <h2>Frequently Asked Questions</h2>
+        <p>Best menpower serv provider in Noida</p>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="box">         
+              <h4>Why a business need an GS Enterprises?</h4>
+              <p>Our menpower department is a very important part of the businesses. Employees are the backbone of any business as they help your business in getting customers, sales, and make profits. GS Enterprises helps your business in managing and providing values to your employees because a happy employee means a happy employer.</p>
+            </div>            
+          </div>
+          <div class="col-lg-6">
+            <div class="box">            
+              <h4>What are the GS Enterprises Services?</h4>
+              <p>GS Enterprises Services are the services that deal with employees of a business. It includes hiring, recruiting, talent acquisition, payroll services, and much more. You can find more services by visiting siting our services page</p>
+            </div>           
+          </div>          
+        </div>
+        <div>.</div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="box">         
+              <h4>What are the stages of recruitment process that GS Enterprises provide?</h4>
+              <p>GS Enterprises offers the best menpower services using the industry renounced recruitment process. Different stages of Recruitment that HR consultancy service deals with are- prospecting, evaluating, filtering, analyzing, access, and hiring.</p>
+            </div>            
+          </div>
+          <div class="col-lg-6">
+            <div class="box">            
+              <h4>What Services do GS Enterprises Provide?</h4>
+              <p>GS Enterprises provide multiple ranges of HR Services, from lateral hiring to IT recruitment we got it all. You can explore our recruitment services to find more HR related services.</p>
+            </div>           
+          </div>          
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container-fluid assisted">
+        <div class="row">
+          <div class="col-lg-6"><img src="images/partnr.jpg" alt="partner" width="100%"></div>
+          <div class="col-lg-6">
+            <h2>Assisted<br>
+              Menpower Services</h2>
+              <p>Are you looking to hire new talent for your startup but worried about the consulting fees?</p>
+              <p>Welcome to GS Enterprises Rapid: A Smooth and Swift Process of Finding you the Right Talent</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">  
+              <a href="index.html"><img src="images/logo.png" alt="Logo" width="50%"></a>
+                          
+              <p>Finding well-qualified team members for your business is essential to make your business grow. GS Enterprises is the best menpower services firm that helps businesses in finding the best team. We become an extension for your organization, providing expert guidance, proven strategies.</p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-2">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="services.html">Services </a></li>
+                <li><a href="clients.html">Clients</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-3">
+              <h4>Contact Us</h4>
+              <!-- <p>Office No. 03, Second Floor, B-108, Sector 63, Noida 201301</p> -->
+              <div class="social-icons">
+                <ul>
+                  <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>           
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </footer>
+      <div class="copyright">Copyright © 2024 gsenterprises.me. All rights reserved.</div>
+    </section>
+
+    
+
+  </div>
+
+  <div class="popup-onload">
+    <div class="popupcantainer">
+      <a href="https://smartenpowersystems.in/" class='close'>
+  <div class='popupbox'>
+    <img src="india.png" alt="India">
+    <div class="contry-bg">
+      <p>
+        for customers in <br><span>India</span>
+        </p>
+    </div>
+  
+  </div>
+  </a>
+  <a href="https://www.smartenpowersystems.com/">
+  <div class='popupbox'>
+    <img class="iimg" src="international.png" alt="International">
+    <div class="contry-bg">
+      <p>
+        for customers <br><span>outside india</span>
+        </p>
+    </div>
+    </div>
+  </a>
+    </div>  
+</div>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+      $(function(){
+          // Check if popupShown flag exists in sessionStorage
+          if (!sessionStorage.getItem('popupShown')) {
+              var overlay = $('<div id="overlaypop"></div>');
+              overlay.show();
+              overlay.appendTo(document.body);
+              $('.popup-onload').show();
+
+              // Close button handler
+              $('.close').click(function(){
+                  $('.popup-onload').hide();
+                  overlay.appendTo(document.body).remove();
+                  // Set flag in sessionStorage
+                  sessionStorage.setItem('popupShown', 'true');
+                  return false;
+              });
+          }
+      });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
